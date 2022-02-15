@@ -9,10 +9,14 @@ food_prices ={
     "tortilla chips": 2.28, "shredded colbyjack cheese": 1.98, "fruity pebbles": 3.84,
     "butter": 2.48, "32oz yogurt": 1.92, "6 pack root beer": 2.68, "6 pack diet pepsi": 3.48,
     "4 oz applesauce": 2.26, "3lb bag honeycrisp apples": 6.97, "digiorno pizza": 6.22,
-    "red baron pizza": 4.32, "4pk mac & cheese": 4.74
+    "red baron pizza": 4.32, "4pk mac & cheese": 4.74, "16oz angel hair pasta": 1.48,
+    "16oz alfredo": 2.13, "Nongshim ramen": 1.07, "canned oranges": 1.28, "1lb bananas": 0.58,
+    "9oz doritos": 3.00, "14.5oz doritos": 4.48, "32oz French vanillla creamer": 3.68,
+    "30oz folgers classic roast": 6.92
     }
 
 food_items = list(food_prices.keys())
+prices_food = list(food_prices.values())
 
 grilled_cheese_cheddar = {food_items[0], food_items[1]}
 grilled_cheese_pepperjack = food_items[0], food_items[2]
@@ -31,7 +35,7 @@ def needed_items():
     needed = []
     while True:
         for i in food_items:
-            print(f"{y}: {food_items[x].title()}")
+            print(f"{y}: {food_items[x].title()} ${prices_food[x]}")
             x += 1
             y += 1
         user_input = input("Please select an item by entering its number or enter x to continue >>> ")
